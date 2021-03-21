@@ -1,0 +1,157 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+#fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0) );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.welcome__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5em;  
+    text-align: center;
+}
+
+.welcome__box a {
+    margin-top: 1em;
+}
+
+#quotes {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#quote-box {
+    padding: 1em;
+}
+
+#text {
+    color: white;
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.description {
+    text-align: right;
+    color: white;
+}
+
+#author {
+    margin-left: 0.5em;
+}
+
+.links {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   color: white; 
+   
+}
+
+#new-quote {
+    text-decoration-line: none !important;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white !important;
+    transition: all 0.3s;
+}
+
+#new-quote:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.links__twitter {
+    font-size: 2em;
+    
+}
+
+.links__twitter:hover {
+    cursor: pointer;
+}
+
+.animacion {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #new-quote {
+        bottom: 2%;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #text {
+        font-size: 1.3em;
+    }
+}
